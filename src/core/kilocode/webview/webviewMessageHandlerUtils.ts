@@ -80,7 +80,7 @@ export async function fetchKilocodeNotificationsCore(
 	// Filter notifications for webview display
 	const webviewNotifications = notifications.filter(({ showIn }) => !showIn || showIn.includes("extension"))
 
-	webviewNotifications.push({
+	webviewNotifications.splice(0, 0, {
 		id: "kilo-new-extension-beta-march-11",
 		title: "We've completely rebuilt the Kilo Code extension for VS Code.",
 		message:
